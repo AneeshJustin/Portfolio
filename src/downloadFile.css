@@ -1,0 +1,34 @@
+.download-button {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+  
+}
+.download-button button {
+  
+  display: flex;                   /* Enables flexbox */
+  justify-content: center;        /* Center text horizontally */
+  align-items: center;            /* Center text vertically */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 35px;                   /* Optional: forces height for vertical centering */
+}
+
+
+/* Hover effect */
+.download-button button:hover {
+  background-color: #0056b3; /* Darker blue */
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+.download-button button:active {
+  transform: scale(0.95); /* Button shrinks slightly */
+  background-color: #004799; /* Even darker on press */
+}

@@ -1,0 +1,46 @@
+/* Navbar Container */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Nav Links Container */
+.nav-bar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each List Item */
+.nav-bar-links li {
+  display: flex;
+  align-items: center;
+}
+
+/* Link Styles */
+.nav-bar-links li a,
+.nav-bar-links li .react-scroll-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;              /* Align icon + text inline */
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-bar-links li a:hover,
+.nav-bar-links li .react-scroll-link:hover {
+  color: #00ffff;
+}
