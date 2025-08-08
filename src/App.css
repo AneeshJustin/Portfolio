@@ -146,7 +146,7 @@ a:hover {
   opacity: 1;
 }
 
-/* Responsive */
+/* Tablet Breakpoint */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
@@ -162,5 +162,45 @@ a:hover {
 
   .project-card h3 {
     font-size: 1.2rem;
+  }
+
+  .about, .projects, .contact, .service {
+    padding: 40px 15px;
+  }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .prof-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .about, .projects, .contact, .service {
+    padding: 30px 12px;
+  }
+
+  .about h2, .projects h2, .contact h2, .service h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
   }
 }

@@ -9,6 +9,7 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
 /* Nav Links Container */
@@ -18,6 +19,7 @@
   gap: 30px;
   margin: 0;
   padding: 0;
+  transition: max-height 0.3s ease-in-out;
 }
 
 /* Each List Item */
@@ -33,7 +35,7 @@
   text-decoration: none;
   font-size: 18px;
   cursor: pointer;
-  display: flex;              /* Align icon + text inline */
+  display: flex; /* Align icon + text inline */
   align-items: center;
   gap: 6px;
   transition: color 0.3s ease;
@@ -43,4 +45,42 @@
 .nav-bar-links li a:hover,
 .nav-bar-links li .react-scroll-link:hover {
   color: #00ffff;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Hide nav links on small screens initially */
+@media (max-width: 768px) {
+  .nav-bar-links {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* Show menu when active */
+  .nav-bar-links.active {
+    max-height: 300px; /* enough height to show items */
+  }
+
+  /* Hamburger Menu Button */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+  }
+}
+
+/* Show normal menu on large screens */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
 }
